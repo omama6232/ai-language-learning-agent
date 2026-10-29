@@ -1,0 +1,887 @@
+{
+ "dataset": {
+  "sentences": 2945,
+  "erroneous": 566,
+  "correct": 2379,
+  "source_sentences": 748,
+  "dev": 2348,
+  "holdout": 597,
+  "synthetic_generated": 7580,
+  "synthetic_by_type": {
+   "article_drop": 568,
+   "article_swap": 156,
+   "be_agreement": 268,
+   "contraction": 28,
+   "have_agreement": 4,
+   "homophone": 156,
+   "plural_noun": 442,
+   "preposition": 751,
+   "typo": 4495,
+   "verb_agreement": 76,
+   "verb_tense": 48,
+   "word_order": 588
+  }
+ },
+ "library_versions": {
+  "scikit-learn": "1.9.1"
+ },
+ "baseline_rules_dev_cv": {
+  "accuracy": 0.8829,
+  "precision": 0.7354,
+  "recall": 0.6137,
+  "f1": 0.6691,
+  "tp": 278,
+  "fp": 100,
+  "tn": 1795,
+  "fn": 175
+ },
+ "experiment1_algorithms": {
+  "Logistic Regression | synthetic x0": {
+   "accuracy": 0.8744,
+   "precision": 0.6965,
+   "recall": 0.6181,
+   "f1": 0.655,
+   "roc_auc": 0.8214,
+   "tp": 280,
+   "fp": 122,
+   "tn": 1773,
+   "fn": 173,
+   "seconds": 1.9
+  },
+  "Logistic Regression | synthetic x3": {
+   "accuracy": 0.7355,
+   "precision": 0.4,
+   "recall": 0.7417,
+   "f1": 0.5197,
+   "roc_auc": 0.8192,
+   "tp": 336,
+   "fp": 504,
+   "tn": 1391,
+   "fn": 117,
+   "seconds": 6.4
+  },
+  "Linear SVM | synthetic x0": {
+   "accuracy": 0.8654,
+   "precision": 0.6627,
+   "recall": 0.6159,
+   "f1": 0.6384,
+   "roc_auc": 0.8212,
+   "tp": 279,
+   "fp": 142,
+   "tn": 1753,
+   "fn": 174,
+   "seconds": 1.9
+  },
+  "Linear SVM | synthetic x3": {
+   "accuracy": 0.678,
+   "precision": 0.3487,
+   "recall": 0.7704,
+   "f1": 0.4801,
+   "roc_auc": 0.8143,
+   "tp": 349,
+   "fp": 652,
+   "tn": 1243,
+   "fn": 104,
+   "seconds": 6.3
+  },
+  "Complement Naive Bayes | synthetic x0": {
+   "accuracy": 0.8624,
+   "precision": 0.8533,
+   "recall": 0.3466,
+   "f1": 0.4929,
+   "roc_auc": 0.8096,
+   "tp": 157,
+   "fp": 27,
+   "tn": 1868,
+   "fn": 296,
+   "seconds": 1.6
+  },
+  "Complement Naive Bayes | synthetic x3": {
+   "accuracy": 0.4642,
+   "precision": 0.2473,
+   "recall": 0.8698,
+   "f1": 0.3851,
+   "roc_auc": 0.8047,
+   "tp": 394,
+   "fp": 1199,
+   "tn": 696,
+   "fn": 59,
+   "seconds": 4.5
+  },
+  "Random Forest | synthetic x0": {
+   "accuracy": 0.8194,
+   "precision": 1.0,
+   "recall": 0.064,
+   "f1": 0.1203,
+   "roc_auc": 0.8034,
+   "tp": 29,
+   "fp": 0,
+   "tn": 1895,
+   "fn": 424,
+   "seconds": 13.9
+  },
+  "Random Forest | synthetic x3": {
+   "accuracy": 0.1951,
+   "precision": 0.1931,
+   "recall": 0.9978,
+   "f1": 0.3236,
+   "roc_auc": 0.7982,
+   "tp": 452,
+   "fp": 1889,
+   "tn": 6,
+   "fn": 1,
+   "seconds": 86.9
+  }
+ },
+ "experiment2_tuning": {
+  "Logistic Regression | C=0.3 | syn x0": {
+   "accuracy": 0.8825,
+   "precision": 0.7335,
+   "recall": 0.6137,
+   "f1": 0.6683,
+   "roc_auc": 0.8168,
+   "tp": 278,
+   "fp": 101,
+   "tn": 1794,
+   "fn": 175
+  },
+  "Logistic Regression | C=0.3 | syn x2": {
+   "accuracy": 0.8799,
+   "precision": 0.7209,
+   "recall": 0.6159,
+   "f1": 0.6643,
+   "roc_auc": 0.8175,
+   "tp": 279,
+   "fp": 108,
+   "tn": 1787,
+   "fn": 174
+  },
+  "Logistic Regression | C=0.3 | syn x4": {
+   "accuracy": 0.8722,
+   "precision": 0.6809,
+   "recall": 0.6358,
+   "f1": 0.6575,
+   "roc_auc": 0.8207,
+   "tp": 288,
+   "fp": 135,
+   "tn": 1760,
+   "fn": 165
+  },
+  "Logistic Regression | C=1.0 | syn x0": {
+   "accuracy": 0.8799,
+   "precision": 0.7209,
+   "recall": 0.6159,
+   "f1": 0.6643,
+   "roc_auc": 0.8195,
+   "tp": 279,
+   "fp": 108,
+   "tn": 1787,
+   "fn": 174
+  },
+  "Logistic Regression | C=1.0 | syn x2": {
+   "accuracy": 0.839,
+   "precision": 0.572,
+   "recall": 0.6578,
+   "f1": 0.6119,
+   "roc_auc": 0.8201,
+   "tp": 298,
+   "fp": 223,
+   "tn": 1672,
+   "fn": 155
+  },
+  "Logistic Regression | C=1.0 | syn x4": {
+   "accuracy": 0.8101,
+   "precision": 0.5057,
+   "recall": 0.6887,
+   "f1": 0.5832,
+   "roc_auc": 0.8229,
+   "tp": 312,
+   "fp": 305,
+   "tn": 1590,
+   "fn": 141
+  },
+  "Logistic Regression | C=3.0 | syn x0": {
+   "accuracy": 0.8744,
+   "precision": 0.6965,
+   "recall": 0.6181,
+   "f1": 0.655,
+   "roc_auc": 0.8214,
+   "tp": 280,
+   "fp": 122,
+   "tn": 1773,
+   "fn": 173
+  },
+  "Logistic Regression | C=3.0 | syn x2": {
+   "accuracy": 0.7624,
+   "precision": 0.4305,
+   "recall": 0.7174,
+   "f1": 0.5381,
+   "roc_auc": 0.8209,
+   "tp": 325,
+   "fp": 430,
+   "tn": 1465,
+   "fn": 128
+  },
+  "Logistic Regression | C=3.0 | syn x4": {
+   "accuracy": 0.7176,
+   "precision": 0.3831,
+   "recall": 0.7594,
+   "f1": 0.5093,
+   "roc_auc": 0.8216,
+   "tp": 344,
+   "fp": 554,
+   "tn": 1341,
+   "fn": 109
+  },
+  "Logistic Regression | C=10.0 | syn x0": {
+   "accuracy": 0.8693,
+   "precision": 0.6772,
+   "recall": 0.6159,
+   "f1": 0.6451,
+   "roc_auc": 0.8216,
+   "tp": 279,
+   "fp": 133,
+   "tn": 1762,
+   "fn": 174
+  },
+  "Logistic Regression | C=10.0 | syn x2": {
+   "accuracy": 0.6674,
+   "precision": 0.3402,
+   "recall": 0.7704,
+   "f1": 0.4719,
+   "roc_auc": 0.8153,
+   "tp": 349,
+   "fp": 677,
+   "tn": 1218,
+   "fn": 104
+  },
+  "Logistic Regression | C=10.0 | syn x4": {
+   "accuracy": 0.6312,
+   "precision": 0.3193,
+   "recall": 0.8057,
+   "f1": 0.4574,
+   "roc_auc": 0.8141,
+   "tp": 365,
+   "fp": 778,
+   "tn": 1117,
+   "fn": 88
+  },
+  "Logistic Regression | C=30.0 | syn x0": {
+   "accuracy": 0.8629,
+   "precision": 0.6548,
+   "recall": 0.6115,
+   "f1": 0.6324,
+   "roc_auc": 0.8207,
+   "tp": 277,
+   "fp": 146,
+   "tn": 1749,
+   "fn": 176
+  },
+  "Logistic Regression | C=30.0 | syn x2": {
+   "accuracy": 0.6043,
+   "precision": 0.303,
+   "recall": 0.8079,
+   "f1": 0.4407,
+   "roc_auc": 0.8052,
+   "tp": 366,
+   "fp": 842,
+   "tn": 1053,
+   "fn": 87
+  },
+  "Logistic Regression | C=30.0 | syn x4": {
+   "accuracy": 0.563,
+   "precision": 0.287,
+   "recall": 0.8521,
+   "f1": 0.4294,
+   "roc_auc": 0.8025,
+   "tp": 386,
+   "fp": 959,
+   "tn": 936,
+   "fn": 67
+  },
+  "Linear SVM | C=0.05 | syn x0": {
+   "accuracy": 0.8825,
+   "precision": 0.7335,
+   "recall": 0.6137,
+   "f1": 0.6683,
+   "roc_auc": 0.8176,
+   "tp": 278,
+   "fp": 101,
+   "tn": 1794,
+   "fn": 175
+  },
+  "Linear SVM | C=0.05 | syn x2": {
+   "accuracy": 0.8778,
+   "precision": 0.7065,
+   "recall": 0.6269,
+   "f1": 0.6643,
+   "roc_auc": 0.8197,
+   "tp": 284,
+   "fp": 118,
+   "tn": 1777,
+   "fn": 169
+  },
+  "Linear SVM | C=0.05 | syn x4": {
+   "accuracy": 0.8663,
+   "precision": 0.6555,
+   "recall": 0.6468,
+   "f1": 0.6511,
+   "roc_auc": 0.8231,
+   "tp": 293,
+   "fp": 154,
+   "tn": 1741,
+   "fn": 160
+  },
+  "Linear SVM | C=0.2 | syn x0": {
+   "accuracy": 0.8765,
+   "precision": 0.7053,
+   "recall": 0.6181,
+   "f1": 0.6588,
+   "roc_auc": 0.8208,
+   "tp": 280,
+   "fp": 117,
+   "tn": 1778,
+   "fn": 173
+  },
+  "Linear SVM | C=0.2 | syn x2": {
+   "accuracy": 0.8041,
+   "precision": 0.4944,
+   "recall": 0.6865,
+   "f1": 0.5749,
+   "roc_auc": 0.8221,
+   "tp": 311,
+   "fp": 318,
+   "tn": 1577,
+   "fn": 142
+  },
+  "Linear SVM | C=0.2 | syn x4": {
+   "accuracy": 0.7619,
+   "precision": 0.4304,
+   "recall": 0.7241,
+   "f1": 0.5399,
+   "roc_auc": 0.8233,
+   "tp": 328,
+   "fp": 434,
+   "tn": 1461,
+   "fn": 125
+  },
+  "Linear SVM | C=0.5 | syn x0": {
+   "accuracy": 0.8654,
+   "precision": 0.6627,
+   "recall": 0.6159,
+   "f1": 0.6384,
+   "roc_auc": 0.8212,
+   "tp": 279,
+   "fp": 142,
+   "tn": 1753,
+   "fn": 174
+  },
+  "Linear SVM | C=0.5 | syn x2": {
+   "accuracy": 0.7202,
+   "precision": 0.3849,
+   "recall": 0.7528,
+   "f1": 0.5093,
+   "roc_auc": 0.8185,
+   "tp": 341,
+   "fp": 545,
+   "tn": 1350,
+   "fn": 112
+  },
+  "Linear SVM | C=0.5 | syn x4": {
+   "accuracy": 0.6699,
+   "precision": 0.3446,
+   "recall": 0.7881,
+   "f1": 0.4795,
+   "roc_auc": 0.8151,
+   "tp": 357,
+   "fp": 679,
+   "tn": 1216,
+   "fn": 96
+  },
+  "Linear SVM | C=1.0 | syn x0": {
+   "accuracy": 0.8556,
+   "precision": 0.6307,
+   "recall": 0.6071,
+   "f1": 0.6187,
+   "roc_auc": 0.8197,
+   "tp": 275,
+   "fp": 161,
+   "tn": 1734,
+   "fn": 178
+  },
+  "Linear SVM | C=1.0 | syn x2": {
+   "accuracy": 0.6499,
+   "precision": 0.33,
+   "recall": 0.7903,
+   "f1": 0.4655,
+   "roc_auc": 0.8102,
+   "tp": 358,
+   "fp": 727,
+   "tn": 1168,
+   "fn": 95
+  },
+  "Linear SVM | C=1.0 | syn x4": {
+   "accuracy": 0.6052,
+   "precision": 0.3061,
+   "recall": 0.8256,
+   "f1": 0.4466,
+   "roc_auc": 0.8053,
+   "tp": 374,
+   "fp": 848,
+   "tn": 1047,
+   "fn": 79
+  }
+ },
+ "best_config": {
+  "f1": 0.6683,
+  "family": "Logistic Regression",
+  "C": 0.3,
+  "n_syn": 0
+ },
+ "experiment3_threshold": {
+  "chosen": 0.525,
+  "curve": [
+   {
+    "threshold": 0.2,
+    "accuracy": 0.3769,
+    "precision": 0.2297,
+    "recall": 0.947,
+    "f1": 0.3697
+   },
+   {
+    "threshold": 0.225,
+    "accuracy": 0.4787,
+    "precision": 0.2546,
+    "recall": 0.883,
+    "f1": 0.3953
+   },
+   {
+    "threshold": 0.25,
+    "accuracy": 0.5958,
+    "precision": 0.2984,
+    "recall": 0.8102,
+    "f1": 0.4361
+   },
+   {
+    "threshold": 0.275,
+    "accuracy": 0.6929,
+    "precision": 0.3584,
+    "recall": 0.7483,
+    "f1": 0.4846
+   },
+   {
+    "threshold": 0.3,
+    "accuracy": 0.7811,
+    "precision": 0.4567,
+    "recall": 0.7108,
+    "f1": 0.5561
+   },
+   {
+    "threshold": 0.325,
+    "accuracy": 0.8207,
+    "precision": 0.5286,
+    "recall": 0.6534,
+    "f1": 0.5844
+   },
+   {
+    "threshold": 0.35,
+    "accuracy": 0.8539,
+    "precision": 0.6201,
+    "recall": 0.6269,
+    "f1": 0.6235
+   },
+   {
+    "threshold": 0.375,
+    "accuracy": 0.868,
+    "precision": 0.6715,
+    "recall": 0.6181,
+    "f1": 0.6437
+   },
+   {
+    "threshold": 0.4,
+    "accuracy": 0.8761,
+    "precision": 0.7045,
+    "recall": 0.6159,
+    "f1": 0.6572
+   },
+   {
+    "threshold": 0.425,
+    "accuracy": 0.8803,
+    "precision": 0.7228,
+    "recall": 0.6159,
+    "f1": 0.6651
+   },
+   {
+    "threshold": 0.45,
+    "accuracy": 0.8816,
+    "precision": 0.7297,
+    "recall": 0.6137,
+    "f1": 0.6667
+   },
+   {
+    "threshold": 0.475,
+    "accuracy": 0.8825,
+    "precision": 0.7335,
+    "recall": 0.6137,
+    "f1": 0.6683
+   },
+   {
+    "threshold": 0.5,
+    "accuracy": 0.8825,
+    "precision": 0.7335,
+    "recall": 0.6137,
+    "f1": 0.6683
+   },
+   {
+    "threshold": 0.525,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.55,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.575,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.6,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.625,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.65,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.675,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.7,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.725,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.75,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.775,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.8,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.825,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   },
+   {
+    "threshold": 0.85,
+    "accuracy": 0.8829,
+    "precision": 0.7354,
+    "recall": 0.6137,
+    "f1": 0.6691
+   }
+  ]
+ },
+ "experiment4_ablation": {
+  "all features": {
+   "accuracy": 0.8825,
+   "precision": 0.7335,
+   "recall": 0.6137,
+   "f1": 0.6683,
+   "roc_auc": 0.8168,
+   "tp": 278,
+   "fp": 101,
+   "tn": 1794,
+   "fn": 175
+  },
+  "without word n-grams": {
+   "accuracy": 0.8825,
+   "precision": 0.7335,
+   "recall": 0.6137,
+   "f1": 0.6683,
+   "roc_auc": 0.814,
+   "tp": 278,
+   "fp": 101,
+   "tn": 1794,
+   "fn": 175
+  },
+  "without char n-grams": {
+   "accuracy": 0.8825,
+   "precision": 0.7335,
+   "recall": 0.6137,
+   "f1": 0.6683,
+   "roc_auc": 0.8164,
+   "tp": 278,
+   "fp": 101,
+   "tn": 1794,
+   "fn": 175
+  },
+  "without POS n-grams": {
+   "accuracy": 0.8829,
+   "precision": 0.7354,
+   "recall": 0.6137,
+   "f1": 0.6691,
+   "roc_auc": 0.8093,
+   "tp": 278,
+   "fp": 100,
+   "tn": 1795,
+   "fn": 175
+  },
+  "without rule features": {
+   "accuracy": 0.6917,
+   "precision": 0.3028,
+   "recall": 0.4592,
+   "f1": 0.3649,
+   "roc_auc": 0.6477,
+   "tp": 208,
+   "fp": 479,
+   "tn": 1416,
+   "fn": 245
+  }
+ },
+ "final_holdout": {
+  "rule-based checker (the app)": {
+   "accuracy": 0.8576,
+   "precision": 0.6556,
+   "recall": 0.5221,
+   "f1": 0.5813,
+   "tp": 59,
+   "fp": 31,
+   "tn": 453,
+   "fn": 54
+  },
+  "ml_only": {
+   "accuracy": 0.8576,
+   "precision": 0.6556,
+   "recall": 0.5221,
+   "f1": 0.5813,
+   "roc_auc": 0.7722,
+   "tp": 59,
+   "fp": 31,
+   "tn": 453,
+   "fn": 54
+  },
+  "hybrid rules+ML (experiment)": {
+   "accuracy": 0.8576,
+   "precision": 0.6556,
+   "recall": 0.5221,
+   "f1": 0.5813,
+   "roc_auc": 0.7722,
+   "tp": 59,
+   "fp": 31,
+   "tn": 453,
+   "fn": 54
+  }
+ },
+ "latency_ms_per_sentence": {
+  "rule_checker": 19.5,
+  "ml_scoring_extra": 9.4
+ },
+ "interpretation": {
+  "words_pointing_to_error": [
+   [
+    "way of",
+    0.359
+   ],
+   [
+    "more",
+    0.33
+   ],
+   [
+    "place",
+    0.292
+   ],
+   [
+    "in",
+    0.284
+   ],
+   [
+    "tell",
+    0.251
+   ],
+   [
+    "can be",
+    0.249
+   ],
+   [
+    "old",
+    0.248
+   ],
+   [
+    "need",
+    0.236
+   ],
+   [
+    "about that",
+    0.231
+   ],
+   [
+    "have to",
+    0.23
+   ],
+   [
+    "to know",
+    0.225
+   ],
+   [
+    "way",
+    0.225
+   ]
+  ],
+  "words_pointing_to_correct": [
+   [
+    "not",
+    -0.368
+   ],
+   [
+    "the",
+    -0.279
+   ],
+   [
+    "live",
+    -0.258
+   ],
+   [
+    "an",
+    -0.228
+   ],
+   [
+    "because",
+    -0.224
+   ],
+   [
+    "do",
+    -0.221
+   ],
+   [
+    "does",
+    -0.218
+   ],
+   [
+    "just",
+    -0.218
+   ],
+   [
+    "that the",
+    -0.209
+   ],
+   [
+    "problems",
+    -0.199
+   ],
+   [
+    "is not",
+    -0.193
+   ],
+   [
+    "strong",
+    -0.193
+   ]
+  ],
+  "pos_patterns_pointing_to_error": [
+   [
+    "NN NN",
+    0.434
+   ],
+   [
+    "NNP",
+    0.427
+   ],
+   [
+    "NN VBP",
+    0.399
+   ],
+   [
+    "NN",
+    0.391
+   ],
+   [
+    "IN JJ NN",
+    0.368
+   ],
+   [
+    "DT NN JJ",
+    0.341
+   ],
+   [
+    "PRP VBD VBN",
+    0.323
+   ],
+   [
+    "NNP VBP",
+    0.319
+   ],
+   [
+    "RB TO",
+    0.308
+   ],
+   [
+    "RB TO VB",
+    0.308
+   ],
+   [
+    "IN NN IN",
+    0.296
+   ],
+   [
+    "NN PRP",
+    0.288
+   ]
+  ],
+  "dense_weights": {
+   "rule_issue_count": 2.224,
+   "rule_flag": 2.638,
+   "sentence_length": -0.72
+  }
+ }
+}
