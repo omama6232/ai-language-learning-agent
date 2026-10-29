@@ -12,6 +12,7 @@ An English grammar tutor built with spaCy and Streamlit. The user types an Engli
 ## How to run
 1. Install the libraries:
    pip install -r requirements.txt
+   
    python -m spacy download en_core_web_sm
 2. Start the app:
    streamlit run app.py
